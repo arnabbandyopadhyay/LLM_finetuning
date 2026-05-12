@@ -67,26 +67,19 @@ What it does:
 -  citations
 
 ## QA Dataset Generation: generate_qa_dataset()
-- Automatically generates question-answer pairs using GPT-2
-- Saves data in JSONL format
-- Adds source citations
-{
-  "messages": [
-    {"role":"system"},
-    {"role":"user"},
-    {"role":"assistant"}
-  ]
-}
+- automatically generates question-answer pairs using GPT-2
+- saves data in JSONL format
+- adds source citations
 
 ## Fine-Tuning
-- Uses QLoRA + PEFT
+- uses QLoRA + PEFT
 - Fine-tunes `google/gemma-2b-it`
-- Supports GPU acceleration
+- supports GPU acceleration
 
 ## Evaluation
-- Semantic similarity scoring
-- Citation scoring
-- Leaderboard comparison across models
+- semantic similarity scoring
+- citation scoring
+- leaderboard comparison across models
 
 ---
 
