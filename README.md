@@ -30,24 +30,53 @@ Fine-Tune LLM (QLoRA)
 Evaluate Model
 ```
 
-## Research Paper Collection
-- Fetches papers from arXiv API
-- Filters LLM-related papers
+## Research Paper Collection: fetch_llm_papers()
+- connects to arXiv API
+- Filters LLM-related papers (keywords: LLM, GPT, Transformers, RLHF, Instruction tuning)
 - Keeps papers published after 2023
+Output:
+list of papers with:
+- title
+- summary
+- PDF url
+- year
 
-## PDF Processing
+
+## PDF Processing: download_and_extract()
 - Downloads PDFs automatically
-- Extracts text using PyMuPDF (`fitz`)
+- extracts text using PyMuPDF (`fitz`)
+- reads all pages
+- extracts plain text
+output:
+{
+'text':'...',
+'metadata':{....}
+}
 
-## RAG Pipeline
-- Chunks documents using LangChain
-- Creates embeddings
-- Stores vectors in FAISS
+## chunking and vector DB
+- chunks documents using LangChain: chunk_documents()
+- creates embeddings (converts text chunks into vectors)
+- stores vectors in FAISS: build_vector_db(). This enables semantic search.
 
-## QA Dataset Generation
-- Automatically generates question-answer pairs
+## RAG Pipeline: query_rag()
+What it does:
+- searches vector DB
+- finds top relevant chunks
+- Returns:
+-  context
+-  citations
+
+## QA Dataset Generation: generate_qa_dataset()
+- Automatically generates question-answer pairs using GPT-2
 - Saves data in JSONL format
 - Adds source citations
+{
+  "messages": [
+    {"role":"system"},
+    {"role":"user"},
+    {"role":"assistant"}
+  ]
+}
 
 ## Fine-Tuning
 - Uses QLoRA + PEFT
