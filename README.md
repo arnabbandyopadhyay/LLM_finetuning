@@ -9,6 +9,7 @@ This project builds a complete Large Language Model (LLM) research pipeline:
 - Generates QA datasets automatically
 - Fine-tunes an open-source LLM using QLoRA
 - Evaluates semantic similarity and citation quality
+  
 ```text
 arXiv Papers
      ↓
@@ -27,7 +28,7 @@ Generate QA Dataset
 Fine-Tune LLM (QLoRA)
      ↓
 Evaluate Model
-
+```
 
 ## Research Paper Collection
 - Fetches papers from arXiv API
