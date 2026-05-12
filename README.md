@@ -10,7 +10,23 @@ This project builds a complete Large Language Model (LLM) research pipeline:
 - Fine-tunes an open-source LLM using QLoRA
 - Evaluates semantic similarity and citation quality
 
-# Features
+arXiv Papers
+     ↓
+Download PDFs
+     ↓
+Extract Text
+     ↓
+Chunk Documents
+     ↓
+Create Embeddings
+     ↓
+Store in FAISS Vector DB
+     ↓
+Generate QA Dataset
+     ↓
+Fine-Tune LLM (QLoRA)
+     ↓
+Evaluate Model
 
 ## Research Paper Collection
 - Fetches papers from arXiv API
