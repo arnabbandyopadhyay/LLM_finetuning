@@ -81,16 +81,3 @@ What it does:
 - citation scoring
 - leaderboard comparison across models
 
----
-
-# Project Structure
-
-```bash
-project/
-│
-├── llm_papers/                 # Temporary downloaded PDFs
-├── llm_qa.jsonl                 # Generated QA dataset
-├── llm_finetuned_final/       # Fine-tuned model output
-├── main.py                      # Main pipeline
-├── requirements.txt
-└── README.md
